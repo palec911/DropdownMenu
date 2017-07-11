@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <title>Dropdown Menu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://use.fontawesome.com/b89bde9810.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="menu"><i class="fa fa-bars fa-fw" aria-hidden="true" style="font-size:15px"></i>Dropdown menu<i id = "arrowdown" class="fa fa-angle-down rotate aria-hidden="true"></i></div>
+    
+    <div class="arrow"></div>
+    <div class="options"> 
+      
+      <div class="home"><img src="home.png" height="16" width="16" align='center'></i><span>Home</span></div>
+      <div class="line"></div>
+      <div class="settings"><img src="envelope.png" height="16" width="16" align='center'></i><span>Settings</span></div>
+      <div class="line"></div>
+      <div class="messages"><img src="Settings.png" height="16" width="16" align='center'></i><span>Messages</span></div>
+    </div>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".menu").click(function () {
+   $(this).toggleClass("clicked");
+   $(".options, .arrow").fadeToggle(100);
+   $(".rotate").toggleClass("down");
+});
+
+});
+</script>
+</html>

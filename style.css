@@ -1,0 +1,118 @@
+
+body{
+    background-color: #3E3E3E;
+    font-family : 'Lato', Serif;
+    font-size : 14px;
+    font-weight:bold;
+}
+#container{
+	width : 300px;
+	margin : auto;
+	padding-top :150px;
+  }
+span{
+  margin-left:9px;
+}
+.menu{
+    background-color: white;
+    color: gray;
+    padding: 16px;
+    border: none;
+    border-radius:3px;
+    cursor: pointer;
+    position:relative;
+}
+.menu.clicked{
+    background-color: #3FA6FD;
+    color: white;
+}
+.options{
+
+    width:300px;
+    background-color: white;
+    border:none;
+    border-radius:3px;
+    display:none;
+}
+
+.home{
+    padding: 5%;
+    position:relative;
+}
+.settings{
+    padding: 5%;
+    position:relative;
+}
+.messages{
+    padding: 5%;
+    position:relative;
+}
+.line{
+    height:1px;
+    background-color: gray;
+}
+.arrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    border-color: transparent transparent #ffffff transparent;
+    margin-left:260px;
+    margin-top:20px;
+    display:none;
+}
+#arrowdown{
+    float:right;
+    font-size:22px; 
+
+}
+.rotate{
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(-180deg);
+    -webkit-transform:rotate(-180deg);
+    transform:rotate(-180deg);
+}
+.home:before{
+  position: absolute;
+  content: '';
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 4px solid #3FA6FD;
+  border-top-left-radius:3px;
+}
+.settings:before{
+  position: absolute;
+  content: '';
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 4px solid #3FA6FD;
+}
+.messages:before{
+  position: absolute;
+  content: '';
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 4px solid #3FA6FD;
+  border-bottom-left-radius:3px;
+  }
+ .settings:hover, .home:hover, .messages:hover{
+    background-color:#F4F4F4;
+    cursor:pointer;  
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.settings:hover:before,.home:hover:before, .messages:hover:before,
+.settings .current :before ,.home .current :before ,.messages .current :before {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
